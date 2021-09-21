@@ -65,6 +65,15 @@ body {
         grid-column: 3;
         padding-left:10px;
     }
+    .menu.open{
+        flex-direction: column;
+        height:100%;
+        width:auto;
+    }
+    .menuitem{
+        padding-bottom: 20px;
+    }
+
 }
 /*******SLIDING MENU ***************/
 .menu{
