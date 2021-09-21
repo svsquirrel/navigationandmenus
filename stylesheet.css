@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
+
 body {
     font-size: 14;
     font-family: 'Noto Sans', sans-serif;
@@ -10,7 +11,7 @@ body {
 }
 .header{
     display: grid;
-    grid-template-columns: 125px 300px 1fr 125px;
+    grid-template-columns: 125px 1fr 1fr 1fr;
     grid-template-rows: 150px;
     border-bottom: thick double greenyellow;
 }
@@ -23,7 +24,7 @@ body {
 .titlearea{
     display: grid;
     grid-template-rows: 60px 90px;
-}
+}    
 .title{
     grid-row:1;
     font-size: 32px;
@@ -35,13 +36,13 @@ body {
     color: #34db28;
     font-weight: 400;
     padding-left: 30px;
+    min-width: 270px;
 }
 /****** HAMBURGER****************/
 .hamburger{
     grid-column: 4;
     cursor: pointer;
     margin-top: 75px;
-    margin: 75px 83px 40px 0;
 }
 .bar1, .bar2, .bar3 {
     width: 35px;
@@ -59,30 +60,34 @@ body {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
-
+@media screen and (max-width: 700px) {
+    .hamburger{
+        grid-column: 3;
+        padding-left:10px;
+    }
+}
 /*******SLIDING MENU ***************/
 .menu{
     display: flex;
+    flex-direction: row;
     position: fixed;
     top: 168px;
     width: 100%;
     max-width: 890px;
-    height: 0;
-    background: rgb(59, 93, 145);
-    list-style-type: none;
+    height:0;
     overflow-y: auto;
     transition: width 0.3s ease;
     white-space: nowrap;
-    text-transform: uppercase;
+    list-style-type: none;
 }
 .menu.open {
     border-bottom: 1px solid #666;
+    background: rgb(59, 93, 145);
     color: white;
     padding: 34px;
 }
-.menu li{
-    flex: start; 
-    padding-right: 100px;
+.menuitem{
+   padding-right: 100px;
 }
 
 /* MAIN CONTENT */
