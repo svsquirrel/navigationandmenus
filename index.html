@@ -9,27 +9,32 @@
     <title>Document</title>
 </head>
 <body>
-    <div class = 'header'>
-        <img class = 'weblogo' src = '/logo.png'></img>
-        <div class = 'titlearea'>
-            <p class = 'title'>Green Space:</p>
-            <p class = 'phrase'>providing for the world</p>
+    <div class='wrapper'>
+        <div class = 'header'>
+            <img class = 'weblogo' src = '/logo.png'></img>
+            <div class = 'titlearea'>
+                <p class = 'title'>Green Space:</p>
+                <p class = 'phrase'>providing for the world</p>
+            </div>
+            
+            <div class="hamburger" >
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
         </div>
-        <div class="hamburger" onclick="displayMenu(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>        
-        <div hidden class = 'menubar' >
-            <div class = 'page1'>Page 1</div>
-            <div class = 'page2'>Page 2</div>
-            <div class = 'page3'>Page 3</div>
-        </div>
+        <div class = 'content'>
+            <img class='backgroundimage' src = "/para.jpg"></img>
+        </div>  
+       
+        <ul class = 'menu' id = 'menucontainer'>
+            <li class = 'menuitem'>Page 1</li>
+            <li class = 'menuitem'>Page 2</li>
+            <li class = 'menuitem'>Page 3</li>
+        </ul>
+    </div>  
         
-    </div>
-    <div class = 'content'>
-        <img class='backgroundimage' src = "/para.jpg"></img>
-    </div>
+   
   <script src = 'index.js' ></script> 
 </body>
 </html>

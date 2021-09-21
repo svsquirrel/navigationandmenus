@@ -1,6 +1,8 @@
+menuIcon = document.querySelector('.hamburger')
+mainNav = document.querySelector('#menucontainer')
 
-function displayMenu(x){
-      x.classList.toggle("change");   
-}
-
-   
+menuIcon.addEventListener('click', () => {
+      menuIcon.classList.toggle('is-active');
+      mainNav.classList.toggle('open');
+})
+ 
